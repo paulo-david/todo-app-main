@@ -13,8 +13,13 @@ const Item = styled.div<Props>`
   justify-content: space-around;
   align-items: center;
 
-  color: ${(props) => (props.isDarkMode ? "white" : "black")};
-  text-decoration: ${(props) => (props.isCompleted ? "line-through" : "none")};
+  color: ${(props) =>
+    props.isDarkMode ? "var(--bg_lst_light)" : "var(--dark_gray)"};
+
+  ${(props) =>
+    props.isCompleted
+      ? "text-decoration: line-through; color: var(--light_gray)"
+      : ""};
   background-color: ${(props) =>
     props.isDarkMode ? "var(--bg_lst_dark)" : "var(--bg_lst_light)"};
 

@@ -1,5 +1,5 @@
 import Item from "../Item";
-import ListWrapper, { ListFooter, Filter } from "./styles";
+import ListWrapper, { Spacer, ListFooter, Filter } from "./styles";
 
 import React, { useState } from "react";
 import { useAppSelector as useSelector } from "../../store/hooks";
@@ -38,7 +38,10 @@ const List = () => {
           (task) => filter === "all" || filter === String(task.is_completed)
         )
         .map((task) => (
-          <Item key={task.id} task={task}></Item>
+          <>
+            <Item key={task.id} task={task}></Item>
+            <Spacer className="spacer"></Spacer>
+          </>
         ))}
 
       <ListFooter isDarkMode={isDarkMode}>

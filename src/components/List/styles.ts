@@ -42,6 +42,13 @@ export const ListFooter = styled.div<Props>`
   align-items: center;
 `;
 
+export const Spacer = styled.div`
+  width: 100%;
+  height: 1px;
+
+  background-color: var(--light_gray);
+`;
+
 export const Filter = styled.section<Props>`
   display: flex;
 
