@@ -1,13 +1,16 @@
 /* @import url("https://fonts.google.com/specimen/Josefin+Sans"); */
 
 :root {
-  --bg_light: hsl(0, 0%, 98%);
+  --bg_light:  hsl(236, 33%, 92%);
   --bg_dark: hsl(235, 21%, 11%);
 
   --bg_lst_light: white;
   --bg_lst_dark: hsl(235, 24%, 19%);
 
   --blue:hsl(220, 98%, 61%);
+
+  --light_gray: hsl(236, 9%, 61%);
+  --dark_gray: hsl(235, 19%, 35%);
   
   /* --bg_color: hsl(236, 33%, 92%); */
   /* --bg_color: hsl(233, 11%, 84%); */

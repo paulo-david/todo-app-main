@@ -26,7 +26,7 @@ const App = styled.div<Props>`
 `;
 
 const AppChildren = styled.div`
-  width: 50%;
+  width: 60%;
 
   margin: 0 auto;
   padding-top: 90px;

@@ -27,7 +27,7 @@ const Item = styled.div<Props>`
     justify-content: center;
     align-items: center;
 
-    background-color: hsl(236, 9%, 61%);
+    background-color: var(--light_gray);
 
     &:hover {
       background-image: linear-gradient(
@@ -66,7 +66,6 @@ const Item = styled.div<Props>`
     fill: white;
     cursor: pointer;
   }
-
 `;
 
 export default Item;
