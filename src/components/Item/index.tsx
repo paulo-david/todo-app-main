@@ -10,11 +10,15 @@ import {
 } from "../../store/tasks/taskSlice";
 import store from "../../store/store";
 
+import { useAppSelector as useSelector } from "../../store/hooks";
+
 type Props = {
   task: Task;
 };
 
 const Item = ({ task }: Props) => {
+  const isDarkMode = useSelector((state) => state.themes.isDarkMode);
+
   const toggle_taskStatus = () => {
     const updated_task: TaskDetail = {
       id: task.id || "",
@@ -33,8 +37,11 @@ const Item = ({ task }: Props) => {
   };
 
   return (
-    <ItemWrapper>
-      <div className="circle" onClick={toggle_taskStatus}>
+    <ItemWrapper isDarkMode={isDarkMode} isCompleted={task.is_completed}>
+      <div
+        className={`circle ${task.is_completed ? "rainbow" : ""}`}
+        onClick={toggle_taskStatus}
+      >
         {task.is_completed ? (
           <img src={checkIcon} alt="checkIcon" />
         ) : (
@@ -43,7 +50,12 @@ const Item = ({ task }: Props) => {
       </div>
       <p className="task_description">{task.description}</p>
 
-      <img className="delete_btn" onClick={delete_task_manual} src={crossIcon} alt="crossIcon" />
+      <img
+        className="delete_btn"
+        onClick={delete_task_manual}
+        src={crossIcon}
+        alt="crossIcon"
+      />
     </ItemWrapper>
   );
 };

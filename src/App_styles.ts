@@ -13,13 +13,13 @@ interface Props {
 const App = styled.div<Props>`
   height: 100%;
 
-  background-color: var(--bg_light);
+  background-color: ${(props) => props.isDarkMode ? "var(--bg_dark)" : "var(--bg_light)"};
   background-image: url(${(props) => props.isDarkMode ? bg_desktop_dark : bg_desktop_light});
   background-position: top;
   background-repeat: no-repeat;
 
   @media (max-width: 375px) {
-    background-color: var(--bg_dark);
+    background-color: ${(props) => props.isDarkMode ? "var(--bg_dark)" : "var(--bg_light)"};
     background-image: url(${(props) => props.isDarkMode ? bg_mobile_dark : bg_mobile_light});
   }
 `;
@@ -28,7 +28,7 @@ const AppChildren = styled.div`
   width: 50%;
 
   margin: 0 auto;
-  padding-top: 30px;
+  padding-top: 90px;
 
   @media (max-width: 375px) {
     width: 90%;

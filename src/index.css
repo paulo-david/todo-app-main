@@ -1,18 +1,20 @@
 /* @import url("https://fonts.google.com/specimen/Josefin+Sans"); */
 
 :root {
-
   --bg_light: hsl(0, 0%, 98%);
+  --bg_dark: hsl(235, 21%, 11%);
+
+  --bg_lst_light: white;
+  --bg_lst_dark: hsl(235, 24%, 19%);
+  
   /* --bg_color: hsl(236, 33%, 92%); */
   /* --bg_color: hsl(233, 11%, 84%); */
   /* --bg_color: hsl(236, 9%, 61%); */
   /* --bg_color: hsl(235, 19%, 35%); */
 
-
-  --bg_dark: hsl(235, 21%, 11%);
   /* --bg_dark: hsl(235, 24%, 19%); */
 }
-  /* 
+/* 
 - Very Light Gray: hsl(0, 0%, 98%)
 - Very Light Grayish Blue: hsl(236, 33%, 92%)
 - Light Grayish Blue: hsl(233, 11%, 84%)
@@ -37,7 +39,9 @@
   list_background: light => dark
   */
 
-html, body, #root{
+html,
+body,
+#root {
   height: 100%;
 }
 
