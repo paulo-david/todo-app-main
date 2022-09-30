@@ -14,8 +14,9 @@ interface Props {
 }
 
 export const ListFooter = styled.div<Props>`
-  background-color: var(--bg_lst_light);
-  border-radius: 5px !important;
+  background-color: ${(props) =>
+    props.isDarkMode ? "var(--bg_lst_dark)" : "var(--bg_lst_light)"};
+  border-radius: 0 0 5px 5px !important;
 
   &,
   button {

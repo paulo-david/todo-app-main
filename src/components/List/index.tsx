@@ -1,8 +1,10 @@
 import Item from "../Item";
 import ListWrapper, { ListFooter, Filter } from "./styles";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { useAppSelector as useSelector } from "../../store/hooks";
+import store from "../../store/store";
+import { delete_completedTasks } from "../../store/tasks/taskSlice";
 
 const List = () => {
   const isDarkMode = useSelector((state) => state.themes.isDarkMode);
@@ -23,6 +25,10 @@ const List = () => {
         setFilter("true");
         break;
     }
+  };
+
+  const handleDelete = (event: React.MouseEvent<HTMLButtonElement>) => {
+    store.dispatch(delete_completedTasks({}));
   };
 
   return (
@@ -56,7 +62,9 @@ const List = () => {
           </button>
         </Filter>
 
-        <button id="clearCompleted">Clear Completed</button>
+        <button id="clearCompleted" onClick={handleDelete}>
+          Clear Completed
+        </button>
       </ListFooter>
     </ListWrapper>
   );

@@ -51,13 +51,19 @@ const tasksSlice = createSlice({
 
       state.task_list.splice(task_idx, 1);
     },
-    // delete_completed
+    delete_completedTasks: (state, action) => {
+      state.task_list = state.task_list.filter((task) => !task.is_completed);
+    },
   },
 });
 
 export type { Task, TaskDetail };
 
-export const { addTask_automatic_Id, update_task, delete_task } =
-  tasksSlice.actions;
+export const {
+  addTask_automatic_Id,
+  update_task,
+  delete_task,
+  delete_completedTasks,
+} = tasksSlice.actions;
 
 export default tasksSlice.reducer;
