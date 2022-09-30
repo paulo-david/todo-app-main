@@ -19,8 +19,9 @@ const App = styled.div<Props>`
   background-repeat: no-repeat;
 
   @media (max-width: 375px) {
-    background-color: ${(props) => props.isDarkMode ? "var(--bg_dark)" : "var(--bg_light)"};
-    background-image: url(${(props) => props.isDarkMode ? bg_mobile_dark : bg_mobile_light});
+    background-color: ${(props) =>
+      props.isDarkMode ? "var(--bg_dark)" : "var(--bg_light)"};
+      background-image: url(${(props) => props.isDarkMode ? bg_mobile_dark : bg_mobile_light});
   }
 `;
 

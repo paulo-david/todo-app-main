@@ -17,7 +17,7 @@ const Header = styled.div`
     cursor: pointer;
   }
 
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 `;
 
 export default Header;

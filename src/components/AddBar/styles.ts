@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 const AddBar = styled.div`
+
+  margin-bottom: 30px;
+
   > * {
     border-radius: 5px;
   }
