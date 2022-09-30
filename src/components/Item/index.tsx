@@ -39,7 +39,7 @@ const Item = ({ task }: Props) => {
   return (
     <ItemWrapper isDarkMode={isDarkMode} isCompleted={task.is_completed}>
       <div
-        className={`circle ${task.is_completed ? "rainbow" : ""}`}
+        className="circle"
         onClick={toggle_taskStatus}
       >
         {task.is_completed ? (

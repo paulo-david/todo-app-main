@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface Props {
-  isCompleted: boolean
+  isCompleted: boolean;
   isDarkMode: boolean;
 }
 
@@ -15,7 +15,8 @@ const Item = styled.div<Props>`
 
   color: ${(props) => (props.isDarkMode ? "white" : "black")};
   text-decoration: ${(props) => (props.isCompleted ? "line-through" : "none")};
-  background-color: ${(props) => props.isDarkMode ? "var(--bg_lst_dark)" : "var(--bg_lst_light)"};
+  background-color: ${(props) =>
+    props.isDarkMode ? "var(--bg_lst_dark)" : "var(--bg_lst_light)"};
 
   .circle {
     width: 23px;
@@ -46,14 +47,15 @@ const Item = styled.div<Props>`
       background-color: ${(props) =>
         props.isDarkMode ? "var(--bg_lst_dark)" : "var(--bg_lst_light)"};
     }
-  }
 
-  .rainbow {
-    background-image: linear-gradient(
+    ${(props) =>
+      props.isCompleted
+        ? `background-image: linear-gradient(
       120deg,
       hsl(192, 100%, 67%),
       hsl(280, 87%, 65%)
-    );
+    );`
+        : ""}
   }
 
   .task_description {
@@ -65,7 +67,6 @@ const Item = styled.div<Props>`
     cursor: pointer;
   }
 
-  /* mobile config */
 `;
 
 export default Item;
