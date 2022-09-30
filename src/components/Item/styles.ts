@@ -23,25 +23,28 @@ const Item = styled.div`
       hsl(280, 87%, 65%)
     );
 
+    cursor: pointer;
+
     .checkIcon_background {
       width: 18px;
       height: 18px;
       border-radius: 50%;
 
+      
       /* background-color: list_background; */
     }
   }
-
+  
   .task_description {
     width: 60%;
   }
-
+  
   .delete_btn {
     fill: white;
+    cursor: pointer;
   }
 
   /* mobile config */
-
 `;
 
 export default Item;

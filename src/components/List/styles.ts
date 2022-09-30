@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const List = styled.div`
-  width: 50%;
+  width: 100%;
   max-width: 500px;
 
   & > :first-child {
