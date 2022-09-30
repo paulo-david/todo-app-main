@@ -36,7 +36,7 @@ const AddBar = () => {
   };
 
   return (
-    <AddBarWrapper>
+    <AddBarWrapper isDarkMode={isDarkMode}>
       <ItemWrapper isCompleted={isCompleted} isDarkMode={isDarkMode}>
         <div className="circle" onClick={toggle_isCompleted}>
           {isCompleted ? (

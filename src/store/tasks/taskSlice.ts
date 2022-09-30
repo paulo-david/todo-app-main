@@ -19,9 +19,7 @@ interface TasksState {
 }
 
 const initialState = {
-  task_list: [
-    { id: "234", is_completed: true, description: "description test" },
-  ],
+  task_list: [],
   loading: "idle",
 } as TasksState;
 
@@ -51,7 +49,7 @@ const tasksSlice = createSlice({
         (task) => task.id === action.payload.id
       );
 
-      state.task_list.splice(task_idx, 1)
+      state.task_list.splice(task_idx, 1);
     },
     // delete_completed
   },
@@ -59,6 +57,7 @@ const tasksSlice = createSlice({
 
 export type { Task, TaskDetail };
 
-export const { addTask_automatic_Id, update_task, delete_task } = tasksSlice.actions;
+export const { addTask_automatic_Id, update_task, delete_task } =
+  tasksSlice.actions;
 
 export default tasksSlice.reducer;

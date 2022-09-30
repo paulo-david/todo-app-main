@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
-const AddBar = styled.div`
+interface Props {
+  isDarkMode: boolean;
+}
 
+const AddBar = styled.div<Props>`
   margin-bottom: 30px;
+  caret-color: var(--blue);
 
   > * {
     border-radius: 5px;
@@ -14,6 +18,10 @@ const AddBar = styled.div`
     border: none;
 
     outline: none;
+
+    color: ${(props) => (props.isDarkMode ? "white" : "black")};
+    background-color: ${(props) =>
+      props.isDarkMode ? "var(--bg_lst_dark)" : "var(--bg_lst_light)"};
   }
 
   #empty {
