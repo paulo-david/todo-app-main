@@ -2,10 +2,6 @@ import styled from "styled-components";
 
 const List = styled.div`
   width: 100%;
-
-  & > :first-child {
-    border-radius: 5px 5px 0 0;
-  }
 `;
 
 interface Props {
@@ -16,7 +12,11 @@ interface Props {
 export const ListFooter = styled.div<Props>`
   background-color: ${(props) =>
     props.isDarkMode ? "var(--bg_lst_dark)" : "var(--bg_lst_light)"};
-  border-radius: 0 0 5px 5px !important;
+  border-radius: 5px;
+
+  min-height: 50px;
+
+  margin-bottom: 30px;
 
   &,
   button {
